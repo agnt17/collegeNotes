@@ -1,13 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Login from "./pages/login";
+import Login from "./pages/loginPage";
 import Team from "./pages/team";
-import Logout from "./pages/logout";
+import Logout from "./pages/logoutPage";
 import Home from "./pages/home";
 import Contact from "./pages/contact";
 import About from "./pages/about";
-import SignUp from "./pages/signup";
+import SignUp from "./pages/signupPage";
 import Examspace from "./pages/examspace";
 import LearnSpace from "./pages/learnspace";
 import BtechYear from "./pages/exam-folder/Courses/B.tech/BtechYear";

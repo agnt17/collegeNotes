@@ -7,7 +7,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`w-screen flex items-center py-5 fixed z-50  top-0 bg-primary`}
+      className={`w-screen flex items-center py-5 fixed z-50  top-0 bg-emerald-500`}
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
         {/* Logo */}
