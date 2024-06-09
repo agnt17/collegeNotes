@@ -1,14 +1,18 @@
-import React from 'react'
+import React from "react";
+import Navbar from "../components/navbar";
+import Hero from "../components/hero";
+import Footer from "../components/footer";
 
 const Home = () => {
-  return (    
-    <div>
-        <div>Exam-Folder</div>
-        <div>Learn-Folder</div>
-        <div>Team</div>
-        <div>About</div>
+  return (
+    <div className="min-h-screen flex flex-col bg-base-300">
+        <Navbar />
+      <div className="flex-grow">
+        <Hero />
+      </div>
+      <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

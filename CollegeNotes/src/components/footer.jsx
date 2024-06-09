@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div>footer</div>
+    <div className='bg-base-100 text-center ' >Copyright @HBTU NOTES</div>
   )
 }
 
