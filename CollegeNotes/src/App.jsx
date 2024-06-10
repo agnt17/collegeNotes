@@ -18,7 +18,9 @@ import MbaYear from "./pages/exam-folder/Courses/MBA/MbaYear";
 import MscYear from "./pages/exam-folder/Courses/MSc/MscYear";
 import BtechBranch from "./pages/exam-folder/Courses/B.tech/Year/BtechBranch";
 
+
 export default function App() {
+  
   return (
     <BrowserRouter>
       <Routes>

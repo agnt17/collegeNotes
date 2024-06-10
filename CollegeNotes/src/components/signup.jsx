@@ -25,8 +25,8 @@ export default function Signup(){
   }
 
     return(
-        <form className="mt-8 space-y-6 w-11/12 lg:w-4/12 mx-auto p-5" onSubmit={handleSubmit}>
-        <div className="">
+        <form className="mt-8 space-y-6 w-11/12 lg:w-4/12 mx-auto p-5 " onSubmit={handleSubmit}>
+        <div className="\text-white">
         {
                 fields.map(field=>
                         <Input
@@ -40,6 +40,7 @@ export default function Signup(){
                             type={field.type}
                             isRequired={field.isRequired}
                             placeholder={field.placeholder}
+                            className="text-white"
                     />
                 
                 )

@@ -1,15 +1,20 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import examspace from "../pages/examspace";
+import { useAuth0 } from "@auth0/auth0-react";
 
 const Hero = () => {
   const navigate = useNavigate(); // useNavigate should be called inside the component function
-
+  const { isAuthenticated, logout } = useAuth0();
   const handleClick = () => {
-    navigate("/examspace");
+    isAuthenticated ? 
+    navigate("/examspace") :
+    navigate("/login")
   };
   const handleClick1 = () => {
-    navigate("/learnspace");
+    isAuthenticated ? 
+    navigate("/learnspace"): 
+    navigate("/login");
   };
 
   return (
@@ -29,8 +34,10 @@ const Hero = () => {
         >
           ExamSpace
         </div>
-        <div className="w-44 h-24 border border-fuchsia-700 flex justify-center items-center rounded-xl cursor-pointer hover:scale-125 transition-all ease-out duration-2000" onClick={handleClick1}>
-
+        <div
+          className="w-44 h-24 border border-fuchsia-700 flex justify-center items-center rounded-xl cursor-pointer hover:scale-125 transition-all ease-out duration-2000"
+          onClick={handleClick1}
+        >
           LearnSpace
         </div>
       </div>

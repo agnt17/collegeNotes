@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useAuth0 } from "@auth0/auth0-react";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
   const [menuOpen, setMenuOpen] = useState(false);
+  const { isAuthenticated, logout } = useAuth0();
 
   return (
-    <nav
-      className={`w-screen flex items-center py-5 fixed z-50  top-0 bg-emerald-500`}
-    >
+    <nav className={`w-screen flex items-center py-5 fixed z-50 top-0 bg-emerald-500`}>
       <div className="container mx-auto px-4 flex items-center justify-between">
         {/* Logo */}
         <Link
@@ -61,19 +61,27 @@ const Navbar = () => {
           </button>
         </div>
         {/* Menu */}
-        <div
-          className={`lg:flex items-center space-x-6 ${
-            menuOpen ? "flex" : "hidden"
-          }`}
-        >
+        <div className={`lg:flex items-center space-x-6 ${menuOpen ? "flex" : "hidden"}`}>
           <ul className="lg:flex items-center space-x-6">
             <NavItem href="/" onClick={() => setActive()}>
               Home
             </NavItem>
             <NavItem href="/about">About Us</NavItem>
             <NavItem href="/contact">Contact Us</NavItem>
-            <NavItem href="/login">Login</NavItem>
-            <NavItem href="/signup">SignUp</NavItem>
+            {isAuthenticated ? (
+              <NavItem
+                onClick={() =>
+                  logout({ returnTo: window.location.origin })
+                }
+              >
+                Logout
+              </NavItem>
+            ) : (
+              <>
+                <NavItem href="/login">Login</NavItem>
+                <NavItem href="/signup">SignUp</NavItem>
+              </>
+            )}
           </ul>
         </div>
       </div>
@@ -81,11 +89,12 @@ const Navbar = () => {
   );
 };
 
-const NavItem = ({ href, children }) => {
+const NavItem = ({ href, children, onClick }) => {
   return (
     <li>
       <Link
         to={href}
+        onClick={onClick}
         className="text-white hover:text-gray-300 transition-colors duration-300"
       >
         {children}
