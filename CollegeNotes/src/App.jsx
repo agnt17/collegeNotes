@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
+import ReactDOM from "react-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./pages/loginPage";
 import Team from "./pages/team";
@@ -17,10 +17,11 @@ import McaYear from "./pages/exam-folder/Courses/MCA/McaYear";
 import MbaYear from "./pages/exam-folder/Courses/MBA/MbaYear";
 import MscYear from "./pages/exam-folder/Courses/MSc/MscYear";
 import BtechBranch from "./pages/exam-folder/Courses/B.tech/Year/BtechBranch";
-
+import SelectSemester from "./pages/exam-folder/Courses/B.tech/Year/1st/SelectSemester";
+import MyDocument from "./pages/exam-folder/Courses/B.tech/Year/1st/pdf"; // Import your MyDocument component
+import { PDFViewer } from '@react-pdf/renderer';
 
 export default function App() {
-  
   return (
     <BrowserRouter>
       <Routes>
@@ -40,10 +41,23 @@ export default function App() {
         <Route path="/mba_year" element={<MbaYear />} />
         <Route path="/msc_year" element={<MscYear />} />
         <Route path="/btech_branch" element={<BtechBranch />} />
+        <Route path="/semester" element={<SelectSemester />} />
+        <Route path="/pdfviewer" element={<PdfViewerComponent />} />
       </Routes>
     </BrowserRouter>
   );
 }
+
+// Component to render MyDocument inside PDFViewer
+const PdfViewerComponent = () => {
+  return (
+    <div style={{ width: '100%', height: '100vh' }}>
+      <PDFViewer style={{ width: '100%', height: '100%' }}>
+        <MyDocument/>
+      </PDFViewer>
+    </div>
+  );
+};
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<App />);

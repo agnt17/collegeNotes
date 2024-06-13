@@ -28,73 +28,73 @@ const BtechBranch = () => {
         <div className="absolute top-full left-0 w-full mt-2 bg-emerald-700 text-white border border-gray-300 rounded-md shadow-lg z-10 text-center">
           <div
             className="px-4 py-2 hover:bg-emerald-900 cursor-pointer"
-            onClick={() => handleOptionClick("CSE-IT", "/btech_branch")}
+            onClick={() => handleOptionClick("CSE-IT", "/semester")}
           >
             Computer Science and Engineering/ Information Technology
           </div>
           <div
             className="px-4 py-2 hover:bg-emerald-900 cursor-pointer"
-            onClick={() => handleOptionClick("Electronics", "/btech_branch")}
+            onClick={() => handleOptionClick("Electronics", "/semester")}
           >
             Electronics Engineering
           </div>
           <div
             className="px-4 py-2 hover:bg-emerald-900 cursor-pointer"
-            onClick={() => handleOptionClick("Electrical", "/btech_branch")}
+            onClick={() => handleOptionClick("Electrical", "/semester")}
           >
             Electrical Engineering
           </div>
           <div
             className="px-4 py-2 hover:bg-emerald-900 cursor-pointer"
-            onClick={() => handleOptionClick("Mechanical", "/btech_branch")}
+            onClick={() => handleOptionClick("Mechanical", "/semester")}
           >
             Mechanical Engineering
           </div>
           <div
             className="px-4 py-2 hover:bg-emerald-900 cursor-pointer"
-            onClick={() => handleOptionClick("Civil", "/btech_branch")}
+            onClick={() => handleOptionClick("Civil", "/semester")}
           >
             Civil Engineering
           </div>
           <div
             className="px-4 py-2 hover:bg-emerald-900 cursor-pointer"
-            onClick={() => handleOptionClick("Chemical", "/btech_branch")}
+            onClick={() => handleOptionClick("Chemical", "/semester")}
           >
             Chemical Technology
           </div>
           <div
             className="px-4 py-2 hover:bg-emerald-900 cursor-pointer"
-            onClick={() => handleOptionClick("Paint", "/btech_branch")}
+            onClick={() => handleOptionClick("Paint", "/semester")}
           >
             Paint Technology
           </div>
           <div
             className="px-4 py-2 hover:bg-emerald-900 cursor-pointer"
-            onClick={() => handleOptionClick("Plastic", "/btech_branch")}
+            onClick={() => handleOptionClick("Plastic", "/semester")}
           >
             Plastic Technology
           </div>
           <div
             className="px-4 py-2 hover:bg-emerald-900 cursor-pointer"
-            onClick={() => handleOptionClick("Oil", "/btech_branch")}
+            onClick={() => handleOptionClick("Oil", "/semester")}
           >
             Oil Technology
           </div>
           <div
             className="px-4 py-2 hover:bg-emerald-900 cursor-pointer"
-            onClick={() => handleOptionClick("Food", "/btech_branch")}
+            onClick={() => handleOptionClick("Food", "/semester")}
           >
             Food Technology
           </div>
           <div
             className="px-4 py-2 hover:bg-emerald-900 cursor-pointer"
-            onClick={() => handleOptionClick("BioChemical", "/btech_branch")}
+            onClick={() => handleOptionClick("BioChemical", "/semester")}
           >
             Bio-Chemical Engineering
           </div>
           <div
             className="px-4 py-2 hover:bg-emerald-900 cursor-pointer"
-            onClick={() => handleOptionClick("Leather", "/btech_branch")}
+            onClick={() => handleOptionClick("Leather", "/semester")}
           >
             Leather Technology
           </div>
